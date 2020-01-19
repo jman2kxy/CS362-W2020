@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
+Created on Sun Jan 19 2020
 
-@author: tfleck
+@author: igiozeej
 """
 
 import Dominion
@@ -20,7 +20,6 @@ else:
     nV=8
 nC = -10 + 10 * len(player_names)
 
-#Define box
 box = testUtility.GetBoxes(nV)
 
 supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
@@ -38,8 +37,7 @@ supply = testUtility.GetSupply(nV, nC, player_names, box, random10)
 #initialize the trash
 trash = []
 
-#Costruct the Player objects
-players = testUtility.GetPlayer(player_names)
+players = testUtility.GetPlayer(supply)
 
 #Play the game
 turn  = 0

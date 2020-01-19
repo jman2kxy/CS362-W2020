@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Oct 13 15:42:42 2015
+Created on Sun Jan 19 2020
 
-@author: tfleck
+@author: igiozeej
 """
-
 import Dominion
 import random
 from collections import defaultdict
@@ -20,14 +19,13 @@ else:
     nV=8
 nC = -10 + 10 * len(player_names)
 
-#Define box
 box = testUtility.GetBoxes(nV)
 
-supply_order = {0:['Curse','Copper'],2:['Estate','Cellar','Chapel','Moat'],
-                3:['Silver','Chancellor','Village','Woodcutter','Workshop'],
+supply_order = {8:['Curse','Copper'],6:['Estate','Cellar','Chapel','Moat'],
+                5:['Silver','Chancellor','Village','Woodcutter','Workshop'],
                 4:['Gardens','Bureaucrat','Feast','Militia','Moneylender','Remodel','Smithy','Spy','Thief','Throne Room'],
-                5:['Duchy','Market','Council Room','Festival','Laboratory','Library','Mine','Witch'],
-                6:['Gold','Adventurer'],8:['Province']}
+                3:['Duchy','Market','Council Room','Festival','Laboratory','Library','Mine','Witch'],
+                2:['Gold','Adventurer'],0:['Province']}
 
 #Pick 10 cards from box to be in the supply.
 boxlist = [k for k in box]
